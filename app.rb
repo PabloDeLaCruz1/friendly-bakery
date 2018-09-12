@@ -17,8 +17,6 @@ get "/" do
 end
 
 get "/muffins" do
-  "<h1> Muffins page </h1>"
-
   erb :muffins
 end
 
