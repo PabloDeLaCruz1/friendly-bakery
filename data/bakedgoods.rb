@@ -1,13 +1,10 @@
 class BakedGoods
-  attr_accessor :description, :price
+  attr_accessor :description, :price, :ima_url, :name
 
-  def initialize(description, price)
+  def initialize(name, description, price, ima_url)
+    @name = name
     @description = description
     @price = price
-    @catalog = {}
-  end
-
-  def display_all
-    @catalog
+    @ima_url = ima_url
   end
 end

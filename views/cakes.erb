@@ -1,17 +1,17 @@
-<h2>My Muff Muffs</h2>
+<h2>My Choice Cakes</h2>
 
-<% muffins.each_with_index do |muffin, index| %>
+<% cakes.each_with_index do |cake, index| %>
 <% if index%3 === 0 || index === 0%>
   <div class="row">
 <% end %>
     <div class="col s12 m6 l3">
       <div class="card">
         <div class="card-image">
-          <img src="./muffins<%= muffin.ima_url%>">
-          <span class="card-title"><%= muffin.name %></span>
+          <img src="./cakes/<%= cake.ima_url%>">
+          <span class="card-title"><%= cake.name %></span>
         </div>
         <div class="card-content">
-          <p><%= muffin.description%></p>
+          <p><%= cake.description%></p>
         </div>
         <div class="card-action">
           <a href="#">This is a link</a>

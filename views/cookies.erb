@@ -1,24 +1,24 @@
-<h2>My Muff Muffs</h2>
+<h2>My Coco Cookies</h2>
 
-<% muffins.each_with_index do |muffin, index| %>
-<% if index%3 === 0 || index === 0%>
+<% cookies.each_with_index do |cookie, index| %>
+  <% if index%3 === 0 || index === 0%>
   <div class="row">
 <% end %>
     <div class="col s12 m6 l3">
       <div class="card">
         <div class="card-image">
-          <img src="./muffins<%= muffin.ima_url%>">
-          <span class="card-title"><%= muffin.name %></span>
+          <img src="./cookies/<%= cookie.ima_url%>">
+          <span class="card-title"><%= cookie.name %></span>
         </div>
         <div class="card-content">
-          <p><%= muffin.description%></p>
+          <p><%= cookie.description%></p>
         </div>
         <div class="card-action">
           <a href="#">This is a link</a>
         </div>
       </div>
     </div>
-    <% if index % 3 === 0 || index === 0%>
+  <% if index % 3 === 0 || index === 0%>
   <div>
     <% end %>
-<%end %>
+<% end %>

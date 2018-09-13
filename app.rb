@@ -1,23 +1,25 @@
 require "sinatra"
-#configuration
-set :port, 5002
-#Attach to templates
+require_relative "./data/seed"
+include MyMuffins
+include MyCookies
+include MyCakes
 
-#Middleware goes here
-
-#attach to routes
-
-def initialize
-  super
-  @names = %w(Hello I am at names lol)
-end
+set :port, 1337
 
 get "/" do
   erb :index
 end
 
+get "/cakes" do
+  erb :cakes, locals: {cakes: MyCakes.get_cakes}
+end
+
+get "/cookies" do
+  erb :cookies, locals: {cookies: MyCookies.get_cookies}
+end
+
 get "/muffins" do
-  erb :muffins
+  erb :muffins, locals: {muffins: MyMuffins.get_muffins}
 end
 
 #sass templating example

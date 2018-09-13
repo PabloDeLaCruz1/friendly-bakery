@@ -1,10 +1,8 @@
-class Cake < BakedGoods
-  def initialize()
-    super(description, price)
-    @types = {}
-  end
+require_relative "bakedgoods"
 
-  def display_types
-    @types
+class Cake < BakedGoods
+  def initialize(name, description, price, ima_url)
+    super(name, description, price, ima_url)
+    @type = "Cake"
   end
 end
