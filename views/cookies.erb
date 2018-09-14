@@ -1,10 +1,7 @@
 <h2>My Coco Cookies</h2>
-
-<% cookies.each_with_index do |cookie, index| %>
-  <% if index%3 === 0 || index === 0%>
   <div class="row">
-<% end %>
-    <div class="col s12 m6 l3">
+<% cookies.each do |cookie| %>
+    <div class="col s12 m6 l4">
       <div class="card">
         <div class="card-image">
           <img src="./cookies/<%= cookie.ima_url%>">
@@ -14,11 +11,9 @@
           <p><%= cookie.description%></p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+           <p class="price">$<%= cookie.price%></p>
         </div>
       </div>
     </div>
-  <% if index % 3 === 0 || index === 0%>
-  <div>
-    <% end %>
-<% end %>
+<%end %>
+  </div>

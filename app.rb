@@ -1,5 +1,6 @@
 require "sinatra"
 require_relative "./data/seed"
+require_relative "./data/sendgrid"
 include MyMuffins
 include MyCookies
 include MyCakes
@@ -8,6 +9,17 @@ set :port, 1337
 
 get "/" do
   erb :index
+end
+
+get "/contact" do
+  erb :contact
+end
+
+post "/contacts" do
+  email = params[:"email"]
+  puts email
+  send_mail(email)
+  redirect "/"
 end
 
 get "/cakes" do

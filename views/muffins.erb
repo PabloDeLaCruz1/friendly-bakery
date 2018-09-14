@@ -1,9 +1,6 @@
 <h2>My Muff Muffs</h2>
-
-<% muffins.each_with_index do |muffin, index| %>
-<% if index%3 === 0 || index === 0%>
   <div class="row">
-<% end %>
+<% muffins.each do |muffin| %>
     <div class="col s12 m6 l3">
       <div class="card">
         <div class="card-image">
@@ -14,11 +11,9 @@
           <p><%= muffin.description%></p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+          <p class="price">$<%= muffin.price %> </p>
         </div>
       </div>
     </div>
-    <% if index % 3 === 0 || index === 0%>
-  <div>
-    <% end %>
 <%end %>
+  </div>

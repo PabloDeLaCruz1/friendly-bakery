@@ -1,9 +1,6 @@
 <h2>My Choice Cakes</h2>
-
-<% cakes.each_with_index do |cake, index| %>
-<% if index%3 === 0 || index === 0%>
   <div class="row">
-<% end %>
+<% cakes.each do |cake| %>
     <div class="col s12 m6 l3">
       <div class="card">
         <div class="card-image">
@@ -14,11 +11,9 @@
           <p><%= cake.description%></p>
         </div>
         <div class="card-action">
-          <a href="#">This is a link</a>
+            <p class="price">$<%= cake.price%></p>
         </div>
       </div>
     </div>
-    <% if index % 3 === 0 || index === 0%>
-  <div>
-    <% end %>
 <%end %>
+  </div>
