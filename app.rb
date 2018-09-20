@@ -15,6 +15,10 @@ get "/contact" do
   erb :contact
 end
 
+get "/catalog" do
+  erb :catalog
+end
+
 post "/contacts" do
   email = params[:"email"]
   puts email
